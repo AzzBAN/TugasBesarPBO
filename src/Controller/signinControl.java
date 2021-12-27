@@ -34,6 +34,7 @@ public class signinControl implements ActionListener {
                 boolean logstat = false;
                 logstat = usr.cekUser(s.getTf_username().getText(),s.getTf_password().getText());
                 if(logstat){
+                    // update
                     this.username = s.getTf_username().getText();
                     this.password = s.getTf_password().getText();
                     String posisi = usr.cekPosisi(this.username, this.password);
