@@ -3,8 +3,6 @@
   <component name="dataSourceStorageLocal" created-in="IU-213.5744.223">
     <data-source name="tubespbo@localhost" uuid="448cb68d-8238-4a9a-ba56-9cccc52c3702">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
-      <secret-storage>master_key</secret-storage>
-      <auth-provider>no-auth</auth-provider>
       <schema-mapping />
     </data-source>
   </component>
