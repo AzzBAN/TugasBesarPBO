@@ -30,23 +30,23 @@ public class signinControl implements ActionListener {
         if (ae == s.getBtnMasuk()) {
             if (s.getTf_username().getText().isEmpty() || s.getTf_password().getText().isEmpty()){
                 JOptionPane.showMessageDialog(s, "Data Username dan Password kosong");
-                this.username = s.getTf_username().getText();
-                this.password = s.getTf_password().getText();
             } else {
                 boolean logstat = false;
                 logstat = usr.cekUser(s.getTf_username().getText(),s.getTf_password().getText());
                 if(logstat){
-                    String posisi = usr.tst();
-                    System.out.println(posisi);
+                    this.username = s.getTf_username().getText();
+                    this.password = s.getTf_password().getText();
+                    String posisi = usr.cekPosisi(this.username, this.password);
+                    System.out.println("Login sebagai -> "+posisi);
                     System.out.println("Proses Pilih Menu");
                     JOptionPane.showMessageDialog(s, "Log in Berhasil Dilakukan");
-                    if (posisi == "admin"){
+                    if ("admin".equals(posisi)){
                         adminView admin = new adminView();
                         admin.setVisible(true);
-                    } else if (posisi == "manager"){
+                    } else if ("manager".equals(posisi)){
                         ManagerView manager = new ManagerView();
                         manager.setVisible(true);
-                    } else if (posisi == "pelanggan"){
+                    } else if ("pelanggan".equals(posisi)){
                         PelangganView pelanggan = new PelangganView();
                         pelanggan.setVisible(true);
                     } else {

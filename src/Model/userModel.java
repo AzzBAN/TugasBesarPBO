@@ -33,15 +33,17 @@ public class userModel {
     public String cekPosisi(String username, String password) {
         try {
             stmt = conn.getConn().createStatement();
-            String query = "select * from employee where username='" + username + "' and password = '" + password + "'";
+            String query = "select * from employee where (username='"+username+"' and password = '"+password+"')";
             ResultSet rs = stmt.executeQuery(query);
-            if (rs != null && rs.next()) {
+            if (rs.next()) {
+                return rs.getString("posisi");
+            }else{
                 return rs.getString("posisi");
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return "gagal";
+        return "Kosong";
     }
 
     public String tst(){
