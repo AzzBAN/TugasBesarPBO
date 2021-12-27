@@ -23,8 +23,6 @@ public class test extends javax.swing.JFrame {
         jLabel1.setText(usr.tst());
     }
 
-    //awdaw
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
