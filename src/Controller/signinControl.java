@@ -3,10 +3,7 @@ package Controller;
 import java.awt.event.ActionEvent;
 
 import Model.userModel;
-import View.ManagerView;
-import View.PelangganView;
-import View.adminView;
-import View.signin;
+import View.*;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
@@ -57,7 +54,11 @@ public class signinControl implements ActionListener {
                     JOptionPane.showMessageDialog(s,"Login Gagal");
                 }
             }
+            s.dispose();
+        } else if (ae == s.getBtnDaftar()){
+            daftarView daftar = new daftarView();
+            daftar.setVisible(true);
+            s.dispose();
         }
-        s.dispose();
     }
 }
