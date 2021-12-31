@@ -59,7 +59,7 @@ public class daftarView extends javax.swing.JFrame {
 
         jLabel3.setText("Username      :");
 
-        jLabel4.setText("Password       :");
+        jLabel4.setText("Password      :");
 
         jButton1.setText("Daftar");
 
