@@ -194,6 +194,7 @@ public class signin extends javax.swing.JFrame {
 
     public void addListener(ActionListener e){
         btnMasuk.addActionListener(e);
+        btnDaftar.addActionListener(e);
     }
 
     public JButton getBtnDaftar() {
