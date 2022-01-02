@@ -3,7 +3,7 @@ package Model;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import Object.*;
+import Object.user;
 
 public class userModel {
     private koneksi conn;
@@ -46,17 +46,13 @@ public class userModel {
         return "Kosong";
     }
 
-    public String tst(){
+    public void daftarCustomer(user usr){
         try {
             stmt = conn.getConn().createStatement();
-            String query = "select * from employee where nama='azhar'";
-            ResultSet rs = stmt.executeQuery(query);
-            if (rs.next()) {
-                return rs.getString("posisi");
-            }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            String query = "INSERT INTO `employee` (`id`, `nama`, `posisi`, `tgl_lahir`, `username`, `password`) VALUES (NULL, '"+usr.getNama()+"', '"+usr.getPosisi()+"', '"+usr.getTglLahir()+"', '"+usr.getUsername()+"', '"+usr.getPassword()+"')";
+            stmt.executeUpdate(query);
+        } catch (SQLException e) {
+            System.err.println(e);
         }
-        return "gagal";
     }
 }

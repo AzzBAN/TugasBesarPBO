@@ -56,8 +56,7 @@ public class signinControl implements ActionListener {
             }
             s.dispose();
         } else if (ae == s.getBtnDaftar()){
-            daftarView daftar = new daftarView();
-            daftar.setVisible(true);
+            new daftarController();
             s.dispose();
         }
     }
