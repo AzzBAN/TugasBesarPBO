@@ -27,6 +27,7 @@ public class signinControl implements ActionListener {
         if (ae == s.getBtnMasuk()) {
             if (s.getTf_username().getText().isEmpty() || s.getTf_password().getText().isEmpty()){
                 JOptionPane.showMessageDialog(s, "Data Username dan Password kosong");
+                new signinControl();
             } else {
                 boolean logstat = false;
                 logstat = usr.cekUser(s.getTf_username().getText(),s.getTf_password().getText());
@@ -42,8 +43,7 @@ public class signinControl implements ActionListener {
                         adminView admin = new adminView();
                         admin.setVisible(true);
                     } else if ("manager".equals(posisi)){
-                        ManagerView manager = new ManagerView();
-                        manager.setVisible(true);
+                        new managerController();
                     } else if ("pelanggan".equals(posisi)){
                         PelangganView pelanggan = new PelangganView();
                         pelanggan.setVisible(true);
@@ -52,6 +52,7 @@ public class signinControl implements ActionListener {
                     }
                 } else {
                     JOptionPane.showMessageDialog(s,"Login Gagal");
+                    new signinControl();
                 }
             }
             s.dispose();

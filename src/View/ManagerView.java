@@ -5,6 +5,9 @@
  */
 package View;
 
+import javax.swing.*;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Ajar
@@ -28,31 +31,81 @@ public class ManagerView extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        BtnTambahRuangan = new javax.swing.JButton();
+        BtnEditRuangan = new javax.swing.JButton();
+        BtnLihatRuangan = new javax.swing.JButton();
+        BtnLogout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Anda Login sebagai manager");
 
+        BtnTambahRuangan.setText("Tambah Ruangan");
+        BtnTambahRuangan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnTambahRuanganActionPerformed(evt);
+            }
+        });
+
+        BtnEditRuangan.setText("Edit Ruangan");
+
+        BtnLihatRuangan.setText("Lihat Ruangan");
+
+        BtnLogout.setText("Logout");
+        BtnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnLogoutActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(89, 89, 89)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(91, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addGap(87, 87, 87))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(127, 127, 127)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(BtnTambahRuangan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BtnEditRuangan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BtnLihatRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(BtnLogout)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(133, 133, 133)
+                .addGap(14, 14, 14)
                 .addComponent(jLabel1)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
+                .addComponent(BtnTambahRuangan)
+                .addGap(35, 35, 35)
+                .addComponent(BtnEditRuangan)
+                .addGap(35, 35, 35)
+                .addComponent(BtnLihatRuangan)
+                .addGap(18, 18, 18)
+                .addComponent(BtnLogout)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnTambahRuanganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTambahRuanganActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnTambahRuanganActionPerformed
+
+    private void BtnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLogoutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnLogoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -90,6 +143,33 @@ public class ManagerView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnEditRuangan;
+    private javax.swing.JButton BtnLihatRuangan;
+    private javax.swing.JButton BtnLogout;
+    private javax.swing.JButton BtnTambahRuangan;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    public void addListener(ActionListener e){
+        BtnEditRuangan.addActionListener(e);
+        BtnLihatRuangan.addActionListener(e);
+        BtnTambahRuangan.addActionListener(e);
+        BtnLogout.addActionListener(e);
+    }
+
+    public JButton getBtnEditRuangan() {
+        return BtnEditRuangan;
+    }
+
+    public JButton getBtnLihatRuangan() {
+        return BtnLihatRuangan;
+    }
+
+    public JButton getBtnLogout() {
+        return BtnLogout;
+    }
+
+    public JButton getBtnTambahRuangan() {
+        return BtnTambahRuangan;
+    }
 }

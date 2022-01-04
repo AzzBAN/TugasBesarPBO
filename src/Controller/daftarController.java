@@ -21,7 +21,7 @@ public class daftarController implements ActionListener {
     }
 
     public user addCustomer(){
-        user usr = new customer(nama, posisi, username, password, tgl_lahir, 0);
+        user usr = new customer(nama, username, password, posisi, tgl_lahir, 0);
         return usr;
     }
 
