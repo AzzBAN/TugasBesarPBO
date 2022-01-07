@@ -28,19 +28,20 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="BtnTambahRuangan" max="32767" attributes="0"/>
-                          <Component id="BtnEditRuangan" max="32767" attributes="0"/>
-                          <Component id="BtnLihatRuangan" min="-2" pref="152" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
                       <Component id="BtnLogout" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="BtnTambahRuangan" max="32767" attributes="0"/>
+                          <Component id="BtnEditRuangan" max="32767" attributes="0"/>
+                          <Component id="BtnLihatRuangan" alignment="0" max="32767" attributes="0"/>
+                          <Component id="BtnLogTransaksi" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -54,13 +55,15 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Component id="BtnTambahRuangan" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Component id="BtnEditRuangan" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Component id="BtnLihatRuangan" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Component id="BtnLogTransaksi" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="BtnLogout" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="26" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -76,6 +79,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="BtnTambahRuangan">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="15" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Tambah Ruangan"/>
       </Properties>
       <Events>
@@ -84,11 +90,17 @@
     </Component>
     <Component class="javax.swing.JButton" name="BtnEditRuangan">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="15" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Edit Ruangan"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="BtnLihatRuangan">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="15" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Lihat Ruangan"/>
       </Properties>
     </Component>
@@ -99,6 +111,14 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnLogoutActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="BtnLogTransaksi">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Lucida Grande" size="15" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Log Transaksi"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

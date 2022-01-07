@@ -1,6 +1,7 @@
 package Controller;
 
 import View.ManagerView;
+import View.tambahRuangan;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,13 +20,19 @@ public class managerController implements ActionListener {
         Object ae = e.getSource();
         if(ae == m.getBtnLogout()){
             new signinControl();
-            m.dispose();
         } else if (ae == m.getBtnTambahRuangan()){
-
+            System.out.println("-> Tambah Ruangan");
+            new daftarController("manager");
+            m.dispose();
         } else if (ae == m.getBtnEditRuangan()){
 
         } else if (ae == m.getBtnLihatRuangan()){
+            System.out.println("-> Lihat Ruangan");
+            new lihatRuanganController();
+            m.dispose();
+        } else if (ae == m.getBtnLogTransaksi()){
 
         }
+        m.dispose();
     }
 }

@@ -35,12 +35,14 @@ public class ManagerView extends javax.swing.JFrame {
         BtnEditRuangan = new javax.swing.JButton();
         BtnLihatRuangan = new javax.swing.JButton();
         BtnLogout = new javax.swing.JButton();
+        BtnLogTransaksi = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Anda Login sebagai manager");
 
+        BtnTambahRuangan.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
         BtnTambahRuangan.setText("Tambah Ruangan");
         BtnTambahRuangan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,8 +50,10 @@ public class ManagerView extends javax.swing.JFrame {
             }
         });
 
+        BtnEditRuangan.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
         BtnEditRuangan.setText("Edit Ruangan");
 
+        BtnLihatRuangan.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
         BtnLihatRuangan.setText("Lihat Ruangan");
 
         BtnLogout.setText("Logout");
@@ -58,6 +62,9 @@ public class ManagerView extends javax.swing.JFrame {
                 BtnLogoutActionPerformed(evt);
             }
         });
+
+        BtnLogTransaksi.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
+        BtnLogTransaksi.setText("Log Transaksi");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -70,14 +77,15 @@ public class ManagerView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(127, 127, 127)
+                        .addGap(157, 157, 157)
+                        .addComponent(BtnLogout))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(120, 120, 120)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(BtnTambahRuangan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BtnEditRuangan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BtnLihatRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addComponent(BtnLogout)))
+                            .addComponent(BtnLihatRuangan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BtnLogTransaksi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -87,13 +95,15 @@ public class ManagerView extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(34, 34, 34)
                 .addComponent(BtnTambahRuangan)
-                .addGap(35, 35, 35)
+                .addGap(20, 20, 20)
                 .addComponent(BtnEditRuangan)
-                .addGap(35, 35, 35)
+                .addGap(20, 20, 20)
                 .addComponent(BtnLihatRuangan)
-                .addGap(18, 18, 18)
+                .addGap(20, 20, 20)
+                .addComponent(BtnLogTransaksi)
+                .addGap(30, 30, 30)
                 .addComponent(BtnLogout)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -145,6 +155,7 @@ public class ManagerView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnEditRuangan;
     private javax.swing.JButton BtnLihatRuangan;
+    private javax.swing.JButton BtnLogTransaksi;
     private javax.swing.JButton BtnLogout;
     private javax.swing.JButton BtnTambahRuangan;
     private javax.swing.JLabel jLabel1;
@@ -155,6 +166,11 @@ public class ManagerView extends javax.swing.JFrame {
         BtnLihatRuangan.addActionListener(e);
         BtnTambahRuangan.addActionListener(e);
         BtnLogout.addActionListener(e);
+        BtnLogTransaksi.addActionListener(e);
+    }
+
+    public JButton getBtnLogTransaksi() {
+        return BtnLogTransaksi;
     }
 
     public JButton getBtnEditRuangan() {
