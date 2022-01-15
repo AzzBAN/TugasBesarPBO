@@ -5,14 +5,19 @@
  */
 package View;
 
+import Controller.daftarController;
+
 import javax.swing.*;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.util.EventListener;
 
 /**
  *
  * @author Ajar
  */
-public class signin extends javax.swing.JFrame {
+public class signin extends javax.swing.JFrame  {
 
     /**
      * Creates new form signin
@@ -40,6 +45,11 @@ public class signin extends javax.swing.JFrame {
         tf_password = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                formKeyPressed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("SELAMAT DATANG");
@@ -125,10 +135,11 @@ public class signin extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnDaftar)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void tf_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_usernameActionPerformed
@@ -142,6 +153,10 @@ public class signin extends javax.swing.JFrame {
     private void tf_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_passwordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tf_passwordActionPerformed
+
+    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formKeyPressed
 
     /**
      * @param args the command line arguments
@@ -173,7 +188,6 @@ public class signin extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new signin().setVisible(true);
             }
         });
     }
@@ -205,6 +219,11 @@ public class signin extends javax.swing.JFrame {
     public void addListener(ActionListener e){
         btnMasuk.addActionListener(e);
         btnDaftar.addActionListener(e);
+    }
+
+    public void addKeyListener(KeyListener e){
+        tf_password.addKeyListener(e);
+        btnMasuk.addKeyListener(e);
     }
 
     public JButton getBtnDaftar() {

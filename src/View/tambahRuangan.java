@@ -53,6 +53,9 @@ public class tambahRuangan extends javax.swing.JFrame implements ChangeListener{
         cb_wifi = new javax.swing.JCheckBox();
         jLabel7 = new javax.swing.JLabel();
         BtnDaftar = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        Tf_harga = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -131,13 +134,32 @@ public class tambahRuangan extends javax.swing.JFrame implements ChangeListener{
             }
         });
 
+        jLabel8.setText("Harga              :");
+
+        jLabel9.setText("/jam");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Btn_back)
+                        .addGap(14, 14, 14))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(BtnDaftar)
+                        .addGap(194, 194, 194))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(18, 18, 18)
+                        .addComponent(Tf_harga, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel9))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
@@ -176,15 +198,6 @@ public class tambahRuangan extends javax.swing.JFrame implements ChangeListener{
                             .addGap(18, 18, 18)
                             .addComponent(Tf_namaRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(45, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Btn_back)
-                        .addGap(14, 14, 14))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(BtnDaftar)
-                        .addGap(194, 194, 194))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,12 +237,18 @@ public class tambahRuangan extends javax.swing.JFrame implements ChangeListener{
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cb_mejaRapat)
                     .addComponent(cb_wifi))
-                .addGap(32, 32, 32)
+                .addGap(13, 13, 13)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(Tf_harga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addGap(22, 22, 22)
                 .addComponent(BtnDaftar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(29, 29, 29))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void tf_luasRuanganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_luasRuanganActionPerformed
@@ -296,6 +315,7 @@ public class tambahRuangan extends javax.swing.JFrame implements ChangeListener{
     private javax.swing.JButton Btn_back;
     private javax.swing.JSlider Sl_rating;
     private javax.swing.JTextArea Ta_lokasi;
+    private javax.swing.JTextField Tf_harga;
     private javax.swing.JTextField Tf_namaRuangan;
     private javax.swing.JCheckBox cb_TV;
     private javax.swing.JCheckBox cb_ac;
@@ -310,6 +330,8 @@ public class tambahRuangan extends javax.swing.JFrame implements ChangeListener{
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField tf_luasRuangan;
     // End of variables declaration//GEN-END:variables
 
@@ -369,5 +391,13 @@ public class tambahRuangan extends javax.swing.JFrame implements ChangeListener{
 
     public JButton getBtnDaftar() {
         return BtnDaftar;
+    }
+
+    public JTextField getTf_harga() {
+        return Tf_harga;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
     }
 }

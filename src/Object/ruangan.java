@@ -2,14 +2,15 @@ package Object;
 
 public class ruangan {
     private String nama, lokasi, besarRuanganm, fasilitas;
-    int rating;
+    int rating, harga;
 
-    public ruangan(String nama, String lokasi, int rating, String besarRuanganm, String fasilitas) {
+    public ruangan(String nama, String lokasi, int rating, String besarRuanganm, String fasilitas, int harga) {
         this.nama = nama;
         this.lokasi = lokasi;
         this.rating = rating;
         this.besarRuanganm = besarRuanganm;
         this.fasilitas = fasilitas;
+        this.harga = harga;
     }
 
     public String getNama() {
@@ -42,6 +43,10 @@ public class ruangan {
 
     public void setRating(int rating) {
         this.rating = rating;
+    }
+
+    public int getHarga() {
+        return harga;
     }
 
     public String getBesarRuanganm() {

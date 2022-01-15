@@ -144,6 +144,7 @@ public class daftarView extends javax.swing.JFrame {
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {Tf_nama, Tf_password, Tf_username});
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Tf_namaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tf_namaActionPerformed

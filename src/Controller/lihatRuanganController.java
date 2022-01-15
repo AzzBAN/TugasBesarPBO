@@ -17,11 +17,11 @@ public class lihatRuanganController implements ActionListener {
 
     public lihatRuanganController(){
         l = new lihatRuangan();
+        l.getBtnEdit().setVisible(false);
+        l.getBtnHapus().setVisible(false);
         l.setVisible(true);
         l.addListener(this);
         r = new ruanganModel();
-        System.out.println("masuk");
-        r.showRuangan();
         DefaultListModel model;
         model = r.showRuangan();
         l.getjList1().setModel(model);
