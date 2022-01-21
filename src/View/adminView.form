@@ -29,8 +29,21 @@
               <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="BtnManageAkun" alignment="1" min="-2" pref="181" max="-2" attributes="0"/>
+                          <Component id="BtnTambahAkun" min="-2" pref="181" max="-2" attributes="0"/>
+                          <Component id="BtnManageRuangan" alignment="1" min="-2" pref="181" max="-2" attributes="0"/>
+                          <Component id="BtnLogTransaksi" alignment="1" min="-2" pref="181" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
               <EmptySpace pref="105" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -40,7 +53,15 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="257" max="32767" attributes="0"/>
+              <EmptySpace pref="48" max="32767" attributes="0"/>
+              <Component id="BtnTambahAkun" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="BtnManageAkun" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="BtnManageRuangan" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="BtnLogTransaksi" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               <Component id="BtnLogout" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
           </Group>
@@ -59,6 +80,29 @@
     <Component class="javax.swing.JButton" name="BtnLogout">
       <Properties>
         <Property name="text" type="java.lang.String" value="Logout"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="BtnTambahAkun">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tambah Akun"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnTambahAkunActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="BtnManageAkun">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Manage Akun"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="BtnManageRuangan">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Manage Ruangan"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="BtnLogTransaksi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Log Transaksi"/>
       </Properties>
     </Component>
   </SubComponents>

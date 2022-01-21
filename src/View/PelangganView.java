@@ -33,6 +33,8 @@ public class PelangganView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         BtnLogout = new javax.swing.JButton();
         BtnBookRuangan = new javax.swing.JButton();
+        BtnPembayaran = new javax.swing.JButton();
+        BtnRuangan = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,6 +43,10 @@ public class PelangganView extends javax.swing.JFrame {
         BtnLogout.setText("LogOut");
 
         BtnBookRuangan.setText("Book ruangan");
+
+        BtnPembayaran.setText("Pembayaran");
+
+        BtnRuangan.setText("Ruangan Saya");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -52,11 +58,15 @@ public class PelangganView extends javax.swing.JFrame {
                 .addGap(127, 127, 127))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(BtnRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(157, 157, 157)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(BtnBookRuangan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(BtnPembayaran, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addComponent(BtnBookRuangan))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(169, 169, 169)
+                        .addGap(174, 174, 174)
                         .addComponent(BtnLogout)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -67,7 +77,11 @@ public class PelangganView extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(BtnBookRuangan)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 189, Short.MAX_VALUE)
+                .addGap(40, 40, 40)
+                .addComponent(BtnPembayaran)
+                .addGap(43, 43, 43)
+                .addComponent(BtnRuangan)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addComponent(BtnLogout)
                 .addContainerGap())
         );
@@ -114,12 +128,24 @@ public class PelangganView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnBookRuangan;
     private javax.swing.JButton BtnLogout;
+    private javax.swing.JButton BtnPembayaran;
+    private javax.swing.JButton BtnRuangan;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
     public void addListener(ActionListener e){
         BtnBookRuangan.addActionListener(e);
         BtnLogout.addActionListener(e);
+        BtnPembayaran.addActionListener(e);
+        BtnRuangan.addActionListener(e);
+    }
+
+    public JButton getBtnRuangan() {
+        return BtnRuangan;
+    }
+
+    public JButton getBtnPembayaran() {
+        return BtnPembayaran;
     }
 
     public JButton getBtnBookRuangan() {

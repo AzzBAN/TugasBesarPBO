@@ -1,5 +1,6 @@
 package Model;
 
+import javax.swing.*;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,6 +22,7 @@ public class koneksi {
         try{
             conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
         }catch(SQLException e){
+            JOptionPane.showMessageDialog(null, "Koneksi Gagal");
             System.err.println("Koneksi gagal !!!!");
             System.err.println(e);
         }

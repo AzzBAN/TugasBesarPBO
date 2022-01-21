@@ -5,6 +5,9 @@
  */
 package View;
 
+import javax.swing.*;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Ajar
@@ -29,6 +32,10 @@ public class adminView extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         BtnLogout = new javax.swing.JButton();
+        BtnTambahAkun = new javax.swing.JButton();
+        BtnManageAkun = new javax.swing.JButton();
+        BtnManageRuangan = new javax.swing.JButton();
+        BtnLogTransaksi = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -36,6 +43,19 @@ public class adminView extends javax.swing.JFrame {
         jLabel1.setText("Anda Login Sebagai Admin");
 
         BtnLogout.setText("Logout");
+
+        BtnTambahAkun.setText("Tambah Akun");
+        BtnTambahAkun.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnTambahAkunActionPerformed(evt);
+            }
+        });
+
+        BtnManageAkun.setText("Manage Akun");
+
+        BtnManageRuangan.setText("Manage Ruangan");
+
+        BtnLogTransaksi.setText("Log Transaksi");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -46,8 +66,17 @@ public class adminView extends javax.swing.JFrame {
                 .addComponent(BtnLogout)
                 .addGap(177, 177, 177))
             .addGroup(layout.createSequentialGroup()
-                .addGap(104, 104, 104)
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(BtnManageAkun, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BtnTambahAkun, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BtnManageRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BtnLogTransaksi, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(105, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -55,7 +84,15 @@ public class adminView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 257, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addComponent(BtnTambahAkun)
+                .addGap(18, 18, 18)
+                .addComponent(BtnManageAkun)
+                .addGap(18, 18, 18)
+                .addComponent(BtnManageRuangan)
+                .addGap(18, 18, 18)
+                .addComponent(BtnLogTransaksi)
+                .addGap(39, 39, 39)
                 .addComponent(BtnLogout)
                 .addGap(27, 27, 27))
         );
@@ -63,6 +100,10 @@ public class adminView extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnTambahAkunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTambahAkunActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnTambahAkunActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,7 +143,40 @@ public class adminView extends javax.swing.JFrame {
     //nyoba git
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnLogTransaksi;
     private javax.swing.JButton BtnLogout;
+    private javax.swing.JButton BtnManageAkun;
+    private javax.swing.JButton BtnManageRuangan;
+    private javax.swing.JButton BtnTambahAkun;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+
+    public JButton getBtnLogTransaksi() {
+        return BtnLogTransaksi;
+    }
+
+    public JButton getBtnLogout() {
+        return BtnLogout;
+    }
+
+    public JButton getBtnManageAkun() {
+        return BtnManageAkun;
+    }
+
+    public JButton getBtnManageRuangan() {
+        return BtnManageRuangan;
+    }
+
+    public JButton getBtnTambahAkun() {
+        return BtnTambahAkun;
+    }
+
+    public void addListener(ActionListener e){
+        BtnLogout.addActionListener(e);
+        BtnLogTransaksi.addActionListener(e);
+        BtnManageAkun.addActionListener(e);
+        BtnManageRuangan.addActionListener(e);
+        BtnTambahAkun.addActionListener(e);
+    }
 }

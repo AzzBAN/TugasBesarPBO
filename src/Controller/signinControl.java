@@ -9,6 +9,7 @@ import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import Object.user;
 
 public class signinControl implements ActionListener, KeyListener {
     signin s;
@@ -20,7 +21,6 @@ public class signinControl implements ActionListener, KeyListener {
         s.setVisible(true);
         s.addListener(this);
         s.addKeyListener(this);
-//        s.addKeyListener(this);
         usr = new userModel();
     }
 
@@ -42,12 +42,12 @@ public class signinControl implements ActionListener, KeyListener {
                     System.out.println("Login sebagai -> "+posisi);
                     JOptionPane.showMessageDialog(s, "Log in Berhasil Dilakukan");
                     if ("admin".equals(posisi)){
-                        adminView admin = new adminView();
-                        admin.setVisible(true);
+                        new adminController();
                     } else if ("manager".equals(posisi)){
                         new managerController();
                     } else if ("pelanggan".equals(posisi)){
-                        new pelangganController();
+                        user user = usr.getuser(username, password);
+                        new pelangganController(user);
                     } else {
                         JOptionPane.showMessageDialog(s,"Username/Password salah");
                     }
@@ -87,12 +87,12 @@ public class signinControl implements ActionListener, KeyListener {
                     System.out.println("Login sebagai -> "+posisi);
                     JOptionPane.showMessageDialog(s, "Log in Berhasil Dilakukan");
                     if ("admin".equals(posisi)){
-                        adminView admin = new adminView();
-                        admin.setVisible(true);
+                        new adminController();
                     } else if ("manager".equals(posisi)){
                         new managerController();
                     } else if ("pelanggan".equals(posisi)){
-                        new pelangganController();
+                        user user = usr.getuser(username, password);
+                        new pelangganController(user);
                     } else {
                         JOptionPane.showMessageDialog(s,"Username/Password salah");
                     }
@@ -110,7 +110,6 @@ public class signinControl implements ActionListener, KeyListener {
     public void keyReleased(KeyEvent e) {
 
     }
-
 //    @Override
 //    public void keyTyped(KeyEvent e) {
 //

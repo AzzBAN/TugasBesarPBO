@@ -4,7 +4,7 @@
  */
 package View;
 
-import Model.transaksiModel;
+import Model.pemesananModel;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
@@ -13,12 +13,12 @@ import java.awt.event.ActionListener;
  *
  * @author azhar
  */
-public class bookRuangan extends javax.swing.JFrame {
-    transaksiModel t = new transaksiModel();
+public class bookRuanganView extends javax.swing.JFrame {
+    pemesananModel t = new pemesananModel();
     /**
      * Creates new form bookRuangan
      */
-    public bookRuangan() {
+    public bookRuanganView() {
         initComponents();
     }
 
@@ -92,7 +92,6 @@ public class bookRuangan extends javax.swing.JFrame {
         jLabel2.setText("Jam");
 
         labelTersedia.setForeground(new java.awt.Color(0, 204, 0));
-        labelTersedia.setText("Ruangan Tersedia");
 
         BtnCekRuangan.setText("Cek Ruangan");
 
@@ -214,7 +213,6 @@ public class bookRuangan extends javax.swing.JFrame {
                                                 .addComponent(BtnCekRuangan)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(labelTersedia))
-                                            .addComponent(jLabel3)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(cbTanggal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
@@ -237,7 +235,12 @@ public class bookRuangan extends javax.swing.JFrame {
                                 .addGap(0, 82, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(jLabel3)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1)
@@ -318,20 +321,21 @@ public class bookRuangan extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(bookRuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(bookRuanganView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(bookRuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(bookRuanganView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(bookRuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(bookRuanganView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(bookRuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(bookRuanganView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new bookRuangan().setVisible(true);
+                new bookRuanganView().setVisible(true);
             }
         });
     }

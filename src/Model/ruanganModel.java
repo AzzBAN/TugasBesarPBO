@@ -128,4 +128,15 @@ public class ruanganModel {
         }
     }
 
+    public void hapusRuangan(String nama){
+        try{
+            stmt = conn.getConn().createStatement();
+            String query = "DELETE FROM ruangan WHERE nama = '"+nama+"' ";
+            stmt.executeUpdate(query);
+            JOptionPane.showMessageDialog(null, "Proses hapus ruangan berhasil");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

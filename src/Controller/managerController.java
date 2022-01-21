@@ -27,12 +27,13 @@ public class managerController implements ActionListener {
             new daftarController("manager", "tambah");
         } else if (ae == m.getBtnEditRuangan()){
             System.out.println("-> Edit Ruangan");
-            new editController();
+            new editController("manager");
         } else if (ae == m.getBtnLihatRuangan()){
             System.out.println("-> Lihat Ruangan");
             new lihatRuanganController();
         } else if (ae == m.getBtnLogTransaksi()){
-
+            System.out.println("-> Log Transaksi");
+            new pembayaranController();
         }
         m.dispose();
     }

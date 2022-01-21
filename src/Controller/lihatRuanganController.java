@@ -14,7 +14,6 @@ import java.awt.event.MouseListener;
 public class lihatRuanganController implements ActionListener {
     lihatRuangan l;
     ruanganModel r;
-
     public lihatRuanganController(){
         l = new lihatRuangan();
         l.getBtnEdit().setVisible(false);
