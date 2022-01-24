@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
  *
  * @author azhar
  */
-public class pembayaranView extends javax.swing.JFrame {
+public class pembayaranView extends javax.swing.JFrame implements addListener {
 
     /**
      * Creates new form Pembayaran
@@ -241,12 +241,6 @@ public class pembayaranView extends javax.swing.JFrame {
     private javax.swing.JTable tabelPembayaran;
     // End of variables declaration//GEN-END:variables
 
-    public void addListener(ActionListener e){
-        BtnBayar.addActionListener(e);
-        BtnHapus.addActionListener(e);
-        BtnBack.addActionListener(e);
-        BtnCheckout.addActionListener(e);
-    }
 
     public JToggleButton getBtnCheckout() {
         return BtnCheckout;
@@ -282,5 +276,13 @@ public class pembayaranView extends javax.swing.JFrame {
 
     public JTable getTabelPembayaran() {
         return tabelPembayaran;
+    }
+
+    @Override
+    public void addActionListener(ActionListener e) {
+        BtnBayar.addActionListener(e);
+        BtnHapus.addActionListener(e);
+        BtnBack.addActionListener(e);
+        BtnCheckout.addActionListener(e);
     }
 }

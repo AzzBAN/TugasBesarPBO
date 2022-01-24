@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
  *
  * @author Ajar
  */
-public class ManagerView extends javax.swing.JFrame {
+public class ManagerView extends javax.swing.JFrame implements addListener{
 
     /**
      * Creates new form ManagerView
@@ -162,13 +162,6 @@ public class ManagerView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
-    public void addListener(ActionListener e){
-        BtnEditRuangan.addActionListener(e);
-        BtnLihatRuangan.addActionListener(e);
-        BtnTambahRuangan.addActionListener(e);
-        BtnLogout.addActionListener(e);
-        BtnLogTransaksi.addActionListener(e);
-    }
 
     public JButton getBtnLogTransaksi() {
         return BtnLogTransaksi;
@@ -188,5 +181,14 @@ public class ManagerView extends javax.swing.JFrame {
 
     public JButton getBtnTambahRuangan() {
         return BtnTambahRuangan;
+    }
+
+    @Override
+    public void addActionListener(ActionListener e) {
+        BtnEditRuangan.addActionListener(e);
+        BtnLihatRuangan.addActionListener(e);
+        BtnTambahRuangan.addActionListener(e);
+        BtnLogout.addActionListener(e);
+        BtnLogTransaksi.addActionListener(e);
     }
 }

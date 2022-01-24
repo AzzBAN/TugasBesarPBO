@@ -16,7 +16,7 @@ import java.awt.event.ActionListener;
  *
  * @author azhar
  */
-public class tambahRuangan extends javax.swing.JFrame implements ChangeListener{
+public class tambahRuangan extends javax.swing.JFrame implements ChangeListener, addListener{
 
     /**
      * Creates new form tambahRuangan
@@ -340,11 +340,6 @@ public class tambahRuangan extends javax.swing.JFrame implements ChangeListener{
         jLabel7.setText(""+Sl_rating.getValue());
     }
 
-    public void addListener(ActionListener e){
-        Btn_back.addActionListener(e);
-        BtnDaftar.addActionListener(e);
-    }
-
     public JButton getBtn_back() {
         return Btn_back;
     }
@@ -399,5 +394,11 @@ public class tambahRuangan extends javax.swing.JFrame implements ChangeListener{
 
     public JLabel getjLabel7() {
         return jLabel7;
+    }
+
+    @Override
+    public void addActionListener(ActionListener e) {
+        Btn_back.addActionListener(e);
+        BtnDaftar.addActionListener(e);
     }
 }

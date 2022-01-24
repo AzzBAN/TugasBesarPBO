@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
  *
  * @author Ajar
  */
-public class adminView extends javax.swing.JFrame {
+public class adminView extends javax.swing.JFrame implements addListener{
 
     /**
      * Creates new form adminView
@@ -172,7 +172,8 @@ public class adminView extends javax.swing.JFrame {
         return BtnTambahAkun;
     }
 
-    public void addListener(ActionListener e){
+    @Override
+    public void addActionListener(ActionListener e) {
         BtnLogout.addActionListener(e);
         BtnLogTransaksi.addActionListener(e);
         BtnManageAkun.addActionListener(e);

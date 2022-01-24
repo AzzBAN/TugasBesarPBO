@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
  *
  * @author azhar
  */
-public class bookRuanganView extends javax.swing.JFrame {
+public class bookRuanganView extends javax.swing.JFrame implements addListener {
     pemesananModel t = new pemesananModel();
     /**
      * Creates new form bookRuangan
@@ -372,12 +372,6 @@ public class bookRuanganView extends javax.swing.JFrame {
     private javax.swing.JTextField tfDurasi;
     // End of variables declaration//GEN-END:variables
 
-    public void addListener(ActionListener e){
-        BtnBack.addActionListener(e);
-        BtnBook.addActionListener(e);
-        BtnCekRuangan.addActionListener(e);
-    }
-
     public JLabel getLabelFasilitas() {
         return labelFasilitas;
     }
@@ -440,5 +434,12 @@ public class bookRuanganView extends javax.swing.JFrame {
 
     public JComboBox<String> getCbWaktuCheckin() {
         return cbWaktuCheckin;
+    }
+
+    @Override
+    public void addActionListener(ActionListener e) {
+        BtnBack.addActionListener(e);
+        BtnBook.addActionListener(e);
+        BtnCekRuangan.addActionListener(e);
     }
 }

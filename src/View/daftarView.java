@@ -13,7 +13,7 @@ import javax.swing.ImageIcon;
  *
  * @author azhar
  */
-public class daftarView extends javax.swing.JFrame {
+public class daftarView extends javax.swing.JFrame implements addListener{
 
     /**
      * Creates new form daftarView
@@ -264,7 +264,8 @@ public class daftarView extends javax.swing.JFrame {
         return labelPosisi;
     }
 
-    public void addListener(ActionListener e){
+    @Override
+    public void addActionListener(ActionListener e) {
         BtnDaftar.addActionListener(e);
         BtnBack.addActionListener(e);
     }

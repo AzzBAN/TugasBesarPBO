@@ -17,7 +17,7 @@ import java.util.EventListener;
  *
  * @author Ajar
  */
-public class signin extends javax.swing.JFrame  {
+public class signin extends javax.swing.JFrame implements addListener {
 
     /**
      * Creates new form signin
@@ -225,11 +225,6 @@ public class signin extends javax.swing.JFrame  {
         return tf_username;
     }
 
-    public void addListener(ActionListener e){
-        btnMasuk.addActionListener(e);
-        btnDaftar.addActionListener(e);
-    }
-
     public void addKeyListener(KeyListener e){
         tf_password.addKeyListener(e);
         btnMasuk.addKeyListener(e);
@@ -238,6 +233,11 @@ public class signin extends javax.swing.JFrame  {
     public JButton getBtnDaftar() {
         return btnDaftar;
     }
-    
-    
+
+
+    @Override
+    public void addActionListener(ActionListener e) {
+        btnMasuk.addActionListener(e);
+        btnDaftar.addActionListener(e);
+    }
 }

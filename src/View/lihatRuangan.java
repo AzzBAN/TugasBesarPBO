@@ -16,7 +16,7 @@ import java.awt.event.MouseListener;
  *
  * @author azhar
  */
-public class lihatRuangan extends javax.swing.JFrame {
+public class lihatRuangan extends javax.swing.JFrame implements addListener {
     ruanganModel r = new ruanganModel();
     /**
      * Creates new form lihatRuangan
@@ -277,11 +277,6 @@ public class lihatRuangan extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
 
-    public void addListener(ActionListener e){
-        BtnBack.addActionListener(e);
-        BtnEdit.addActionListener(e);
-        BtnHapus.addActionListener(e);
-    }
 
     public void addMouseListener(MouseListener e){
         jList1.addMouseListener(e);
@@ -353,5 +348,12 @@ public class lihatRuangan extends javax.swing.JFrame {
 
     public JLabel getjLabelnama() {
         return jLabelnama;
+    }
+
+    @Override
+    public void addActionListener(ActionListener e) {
+        BtnBack.addActionListener(e);
+        BtnEdit.addActionListener(e);
+        BtnHapus.addActionListener(e);
     }
 }
