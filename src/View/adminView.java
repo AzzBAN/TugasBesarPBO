@@ -173,7 +173,7 @@ public class adminView extends javax.swing.JFrame implements addListener{
     }
 
     @Override
-    public void addActionListener(ActionListener e) {
+    public void addListener(ActionListener e) {
         BtnLogout.addActionListener(e);
         BtnLogTransaksi.addActionListener(e);
         BtnManageAkun.addActionListener(e);

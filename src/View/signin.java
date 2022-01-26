@@ -236,7 +236,7 @@ public class signin extends javax.swing.JFrame implements addListener {
 
 
     @Override
-    public void addActionListener(ActionListener e) {
+    public void addListener(ActionListener e) {
         btnMasuk.addActionListener(e);
         btnDaftar.addActionListener(e);
     }

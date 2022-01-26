@@ -265,7 +265,7 @@ public class daftarView extends javax.swing.JFrame implements addListener{
     }
 
     @Override
-    public void addActionListener(ActionListener e) {
+    public void addListener(ActionListener e) {
         BtnDaftar.addActionListener(e);
         BtnBack.addActionListener(e);
     }

@@ -397,7 +397,7 @@ public class tambahRuangan extends javax.swing.JFrame implements ChangeListener,
     }
 
     @Override
-    public void addActionListener(ActionListener e) {
+    public void addListener(ActionListener e) {
         Btn_back.addActionListener(e);
         BtnDaftar.addActionListener(e);
     }

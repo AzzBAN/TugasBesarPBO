@@ -351,7 +351,7 @@ public class lihatRuangan extends javax.swing.JFrame implements addListener {
     }
 
     @Override
-    public void addActionListener(ActionListener e) {
+    public void addListener(ActionListener e) {
         BtnBack.addActionListener(e);
         BtnEdit.addActionListener(e);
         BtnHapus.addActionListener(e);

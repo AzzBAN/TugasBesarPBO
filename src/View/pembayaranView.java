@@ -279,7 +279,7 @@ public class pembayaranView extends javax.swing.JFrame implements addListener {
     }
 
     @Override
-    public void addActionListener(ActionListener e) {
+    public void addListener(ActionListener e) {
         BtnBayar.addActionListener(e);
         BtnHapus.addActionListener(e);
         BtnBack.addActionListener(e);

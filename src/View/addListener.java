@@ -3,5 +3,5 @@ package View;
 import java.awt.event.ActionListener;
 
 public interface addListener {
-    public void addActionListener(ActionListener e);
+    public void addListener(ActionListener e);
 }
